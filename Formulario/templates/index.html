@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario Web</title>
+</head>
+<body>
+
+	<h1>Ejemplo de entrada de datos con Flask</h1>
+
+	<form class="form" method="POST">
+		<label for="entrada-nombre">Nombre:</label>
+		<input type="text" name="contenido" id="entrada-nombre">
+		<input type="submit" value="Enviar">
+	</form>
+
+	{% if nombre %}
+	<h2>Hola {{nombre}}</h2>
+	{% endif %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ciclo For</title>
+</head>
+<body>
+
+	<h1>Grupos de K-pop Masculinos</h1>
+	<ul>
+		{% for grupo in grupos_masculinos %}
+			<li>{{grupo}}</li>
+
+		{% endfor %}
+	</ul>	
+
+	<h1>Grupos de K-pop Femeninos</h1>
+	<ul>
+		{% for posicion, grupos in grupos_femeninos.items() %}
+			<li>{{posicion}} - {{grupos}}</li>
+
+		{% endfor %}
+	</ul>
+</body>
+</html>
