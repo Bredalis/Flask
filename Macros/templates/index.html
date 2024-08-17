@@ -1,0 +1,20 @@
+<!-- Importar macro -->
+{% from "Macros.jinja2" import lista_usuarios, saludo %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Macros</title>
+</head>
+<body>
+
+	<h2>Tipos de usuarios:</h2>
+
+	{{lista_usuarios(usuarios)}}
+	{{lista_usuarios(usuarios_2)}}
+
+	{{saludo()}}
+</body>
+</html>

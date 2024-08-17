@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Variables y Filtros en Jinja</title>
+</head>
+<body>
+	<h2>Usuarios</h2>
+
+	<!-- Crear una variable -->
+	{% set nombre = "Lisa" %}
+	{% set numero_usuarios = usuarios | length %}
+	{% set union = usuarios | join %}
+
+	{% if numero_usuarios > 0 %}
+		<p>Tengo {{numero_usuarios}} usuarios</p>
+		
+		<ul>
+			{% for usuario in usuarios %}
+				<li>{{usuario}}</li>
+			{% endfor %}
+		</ul>	
+
+	{% else %}
+		<p>No tengo usuarios</p>
+
+	{% endif %}
+
+	<p>Variable creada en HTML: {{nombre}}</p>
+	<p>Variable con el filtro Join: {{union}}</p>
+</body>
+</html>
