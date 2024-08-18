@@ -1,11 +1,16 @@
 
 from flask import Flask, render_template, request
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+
+# Cargar variables de entorno desde .env
+load_dotenv()
 
 app = Flask(__name__)
 
 # Conectar la bbdd 
-cliente = MongoClient("mongodb+srv://bredalisgautreaux:ItF6fAeKDLNFpBAD@cluster0.3myzkvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+cliente = MongoClient(os.getenv("CLAVE_MONGO"))
 app.db = cliente["Formulario"]
 coleccion = app.db["Usuarios"]
 
