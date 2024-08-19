@@ -11,7 +11,7 @@
 
    <ul>
       {% for usuario in usuarios %}
-         <li><a href="{{url_for('perfil_usuario', nombre_usuario = usuario[0])}}" target="_blank">{{usuario[0]}}</a></li>
+         <li><a href="{{ url_for('perfil_usuario', nombre_usuario=usuario[0]) }}" target="_blank">{{ usuario[0] }}</a></li>
 
       {% endfor %}
    </ul>
