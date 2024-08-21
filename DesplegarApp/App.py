@@ -1,6 +1,5 @@
 
 from flask import Flask, render_template
-from dotenv import load_dotenv
 
 def crear_app():
 	app = Flask(__name__)
