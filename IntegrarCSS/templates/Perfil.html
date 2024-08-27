@@ -1,0 +1,8 @@
+{% extends "Codigo_Base.html" %}
+
+{% block titulo %} Perfil de {{ usuario[0] }} {% endblock %}
+
+{% block contenido %}
+	<h2>Biografía de {{ usuario[0] }}</h2>
+	<p>{{ usuario[1] }}</p>
+{% endblock %}

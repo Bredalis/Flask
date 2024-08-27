@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block titulo %} Titulo por default {% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+
+	<header>
+		{% block header %}
+		<h1>Mi Aplicación</h1>
+
+		<nav>
+			<a href="{{ url_for('inicio') }}">Inicio</a>
+			<a href="{{ url_for('perfil_usuario', nombre_usuario='nombre_usuario') }}">Perfil</a>
+		</nav>
+
+		{% endblock %}
+	</header>
+
+	<main>
+		{% block contenido %}
+
+			<!-- Contenido por default -->
+		{% endblock %}
+	</main>
+
+	<footer>
+		{% block footer %}
+
+			<p>&copy; 2023 Mi Aplicación. Todos los derechoc reservados</p>
+		{% endblock %}
+	</footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<h2>Tienda {{ nombre }}</h2>
+	<p>Tienda ubicada en {{ direccion }}. Tiene {{ empleados | length }} empleados.</p>
+
+	<!-- Incluir el contenido del archivo -->
+	{% include "Articulos.html" %}
+</body>
+</html>

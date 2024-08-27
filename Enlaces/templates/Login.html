@@ -1,0 +1,8 @@
+{% extends "Contenido_Base.html" %}
+
+{% block contenido %}
+	<h1>Esta es la página para loguearse</h1>
+
+	<!-- Usar el nombre de la función para mostar la página -->
+	<a href="{{ url_for('signup') }}">Registrarse</a> 
+{% endblock %}
