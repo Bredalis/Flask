@@ -19,7 +19,7 @@ def ciclo_for():
 		1: "BlackPink",
 		2: "Twice",
 		3: "NewJeans",
-		4: "BabyMoster",
+		4: "BabyMonster",
 		5: "Itzy",
 		6: "Ive"
 	}	

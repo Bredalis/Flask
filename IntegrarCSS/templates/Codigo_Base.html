@@ -14,7 +14,7 @@
 
 		<nav>
 			<a href="{{ url_for('inicio') }}">Inicio</a>
-			<a href="{{ url_for('perfil_usuario', nombre_usuario='nombre_usuario') }}">Perfil</a>
+			<a href="{{ url_for('perfil_usuario', nombre_usuario=nombre_usuario) }}">Perfil</a>
 		</nav>
 
 		{% endblock %}
@@ -30,7 +30,7 @@
 	<footer>
 		{% block footer %}
 
-			<p>&copy; 2023 Mi Aplicación. Todos los derechoc reservados</p>
+			<p>&copy; 2023 Mi Aplicación. Todos los derechos reservados</p>
 		{% endblock %}
 	</footer>
 </body>
