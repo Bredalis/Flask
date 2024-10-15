@@ -5,14 +5,14 @@
 <a href="https://lenguajecss.com/" target="_blank">
   <img src="https://img.shields.io/badge/CSS-3498DB">  
 </a>
-<a href="https://lenguajejs.com/" target="_blank">
-  <img src="https://img.shields.io/badge/JavaScript-F7DC6F">
-</a>
 <a href="https://www.python.org" target="_blank">
   <img src="https://img.shields.io/badge/Python-52BE80">
 </a>
 <a href="https://pypi.org/project/Flask/" target="_blank">
   <img src="https://img.shields.io/badge/Flask-808b96">
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Jinja-E74C3C">
 </a>
 <a href="https://www.mongodb.com/try/download/community">
     <img src="https://img.shields.io/badge/MongoDB-52be80">
