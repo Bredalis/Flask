@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Registro de Usuario</title>
-</head>
-<body>
-	<h2>Registro de Usuario</h2>
+{% extends "Contenido_Base.html" %}
 
-	<form method="POST">
-		<label for="nombre-usuaio">Nombre de usuario:</label>
-		<input type="text" id="nombre-usuaio" name="usuario" required>
-
-		<br><br>
-		<label for="contraseña">Contraseña</label>
-		<input type="password" id="contraseña" name="contraseña" required>
-
-		<br><br>		
-		<input type="submit" value="Registrar">
-	</form>
-</body>
-</html>
+{% block titulo1 %}Registro de Usuario{% endblock %}
+{% block titulo2 %}Registro de Usuario{% endblock %}
+{% block titulo3 %}Registro de Usuario{% endblock %}
+{% block boton %}
+	<input type="submit" value="Registrarse">
+{% endblock %}

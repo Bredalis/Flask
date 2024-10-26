@@ -6,17 +6,18 @@
 	<title>Formulario Web</title>
 </head>
 <body>
-
 	<h1>Ejemplo de entrada de datos con Flask</h1>
 
+	<!-- Formulario para enviar datos -->
 	<form class="form" method="POST">
-		<label for="entrada-nombre">Nombre:</label>
-		<input type="text" name="contenido" id="entrada-nombre">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" required>
 		<input type="submit" value="Enviar">
 	</form>
 
+	<!-- Mensaje condicional si se proporciona el nombre -->
 	{% if nombre %}
-	<h2>Hola {{ nombre }}</h2>
+		<h2>Hola {{ nombre }}!</h2>
 	{% endif %}
 </body>
 </html>

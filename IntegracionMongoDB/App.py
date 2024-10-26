@@ -4,32 +4,31 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 
-# Cargar variables de entorno desde .env
+# Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 app = Flask(__name__)
 
-# Conectar la bbdd 
+# Conexión a la base de datos MongoDB
 cliente = MongoClient(os.getenv("CLAVE_MONGO"))
 app.db = cliente["Formulario"]
 coleccion = app.db["Usuarios"]
 
-# Obtener los usuarios
-usuarios = [usuario["Nombre"] for usuario in coleccion.find({})]
-
+# Ruta principal que maneja GET y POST
 @app.route("/", methods = ["GET", "POST"])
 def obtener_datos():
-	info_formulario = request.form.get("contenido")
 
-	if request.method == "POST" and info_formulario != "":
-		parametro = {"Nombre": info_formulario}
-		
-		coleccion.insert_one(parametro)
-		usuarios.append(info_formulario)
+	# Obtener los usuarios
+	usuarios = {usuario["Nombre"] for usuario in coleccion.find({})}
+	nombre = request.form.get("nombre")
+
+	if request.method == "POST" and nombre not in usuarios:
+		coleccion.insert_one({"Nombre": nombre})
+		usuarios.add(nombre)
 
 		print(usuarios) # Mostrar los usuarios
 
 	return render_template("index.html", usuarios = usuarios)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True)

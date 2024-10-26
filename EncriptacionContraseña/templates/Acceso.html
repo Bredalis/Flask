@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Acceso de Usuario</title>
-</head>
-<body>
-	<h2>Acceso de Usuario</h2>
+{% extends "Contenido_Base.html" %}
 
-	<form method="POST">
-		<label for="nombre-usuaio">Nombre de usuario:</label>
-		<input type="text" id="nombre-usuaio" name="usuario" required>
-
-		<br><br>
-		<label for="contraseña">Contraseña</label>
-		<input type="password" id="contraseña" name="contraseña" required>
-
-		<br><br>		
-		<input type="submit" value="Iniciar Sesión">
-	</form>
-</body>
-</html>
+{% block titulo1 %}Acceso de Usuario{% endblock %}
+{% block titulo2 %}Acceso de Usuario{% endblock %}
+{% block titulo3 %}Iniciar Sesión{% endblock %}
+{% block boton %}
+	<input type="submit" value="Iniciar Sesión">
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends "Codigo_Base.html" %}
 
-{% block titulo %} Página de inicio {% endblock %}
+{% block titulo %}Página de inicio{% endblock %}
 
 {% block contenido %}
    <h2>Usuarios</h2> 
@@ -8,7 +8,6 @@
    <ul>
       {% for usuario in usuarios %}
          <li><a href="{{ url_for('perfil_usuario', nombre_usuario=usuario[0]) }}">{{ usuario[0] }}</a></li>
-
       {% endfor %}
    </ul>
 {% endblock %}

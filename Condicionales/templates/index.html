@@ -10,35 +10,33 @@
 	<h1>Condicionales</h1>
 	<h2>Comparaciones Básicas</h2>
 
+	<!-- Condicionales de grupos kpop con comparación -->
 	{% if grupo == "BTS" %}
-	
-	<h3>Integrantres de BTS</h3>
 
-	<ol>
-		<li>RM</li>
-		<li>JIN</li>
-		<li>SUGA</li>
-		<li>J-HOPE</li>
-		<li>JIMIN</li>
-		<li>V</li>
-		<li>JUNGKOOK</li>
-	</ol>
+		<h3>Integrantres de BTS</h3>
+		<ol aria-label="Integrantes de BTS">
+			<li>RM</li>
+			<li>JIN</li>
+			<li>SUGA</li>
+			<li>J-HOPE</li>
+			<li>JIMIN</li>
+			<li>V</li>
+			<li>JUNGKOOK</li>
+		</ol>
 
 	{% elif grupo == "NewJeans" %}
 
-	<h3>Integrantres de NewJeans</h3>
-
-	<ol>
-		<li>MINJI</li>
-		<li>DANIELLE</li>
-		<li>HANNI</li>
-		<li>HAERIN</li>
-		<li>HYEIN</li>
-	</ol>	
+		<h3>Integrantres de NewJeans</h3>
+		<ol aria-label="Integrantes de NewJeans">
+			<li>MINJI</li>
+			<li>DANIELLE</li>
+			<li>HANNI</li>
+			<li>HAERIN</li>
+			<li>HYEIN</li>
+		</ol>	
 
 	{% else %}
-	<h3>El grupo {{ grupo }} no se encuenta en la base de datos</h3>
-
+		<h3>El grupo {{ grupo }} no se encuenta en la base de datos</h3>
 	{% endif %}
 	
 </body>

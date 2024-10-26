@@ -8,10 +8,10 @@
 <body>
 	<h2>Usuarios</h2>
 
-	<!-- Crear una variable -->
+	<!-- Crear variables con set -->
 	{% set nombre = "Lisa" %}
 	{% set numero_usuarios = usuarios | length %}
-	{% set union = usuarios | join %}
+	{% set union = usuarios | join(", ") %}
 
 	{% if numero_usuarios > 0 %}
 		<p>Tengo {{ numero_usuarios }} usuarios</p>
@@ -21,10 +21,8 @@
 				<li>{{ usuario }}</li>
 			{% endfor %}
 		</ul>	
-
 	{% else %}
 		<p>No tengo usuarios</p>
-
 	{% endif %}
 
 	<p>Variable creada en HTML: {{ nombre }}</p>

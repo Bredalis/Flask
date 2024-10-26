@@ -1,8 +1,7 @@
-
 {% macro lista_usuarios(usuarios) %}
 	<ul>
 		{% for usuario, tipo in usuarios %}
-			<li>{{ "[Administradores]" if tipo == "Admin" else "[Usuario Normal]" }} - {{ usuario }}</li>
+			<li>{{ "Administrador" if tipo == "Admin" else "Usuario Normal" }} - {{ usuario }}</li>
 		{% endfor %}
 	</ul>
 {% endmacro %}

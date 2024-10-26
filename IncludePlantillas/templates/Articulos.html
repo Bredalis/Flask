@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Include Plantillas</title>
+</head>
 <body>
 	<h2>Artículos en la tienda</h2>
 
 	<ul>
 		{% for articulo in articulos %}
-			<li>{{ articulo["Nombre"] }} - Cantidad: {{ articulo["Cantidad"] }}</li>
+			<li>{{ articulo.Nombre }} - Cantidad: {{ articulo.Cantidad }}</li>
 		{% endfor %}
 	</ul>
 </body>

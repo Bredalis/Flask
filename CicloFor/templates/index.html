@@ -11,15 +11,13 @@
 	<ul>
 		{% for grupo in grupos_masculinos %}
 			<li>{{ grupo }}</li>
-
 		{% endfor %}
 	</ul>	
 
 	<h1>Grupos de K-pop Femeninos</h1>
 	<ul>
-		{% for posicion, grupos in grupos_femeninos.items() %}
-			<li>{{ posicion }} - {{ grupos }}</li>
-
+		{% for posicion, grupo in grupos_femeninos.items() %}
+			<li>{{ posicion }} - {{ grupo }}</li>
 		{% endfor %}
 	</ul>
 </body>
