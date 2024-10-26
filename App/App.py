@@ -8,7 +8,7 @@ app = Flask(__name__)
 def saludo():
 	return "Hola, Mundo"
 
-@app.route("/nuevo contenido")
+@app.route("/nuevo-contenido")
 def nuevo_contenido():
 	return """
 
@@ -22,11 +22,11 @@ def nuevo_contenido():
 		</html>
 	"""
 
-# Unir la pagina de html
+# Unir la página de html
 @app.route("/index")
 def template_index():
 	return render_template("index.html")
 
-# Poder ejecutarlo directamente desde el editor
+# Ejecutar la app
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True) # Activa modo debug durante el desarrollo

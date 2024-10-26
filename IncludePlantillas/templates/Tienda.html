@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head></head>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Include Plantillas</title>
+</head>
 <body>
 	<h2>Tienda {{ nombre }}</h2>
 	<p>Tienda ubicada en {{ direccion }}. Tiene {{ empleados | length }} empleados.</p>
 
-	<!-- Incluir el contenido del archivo -->
+	<!-- Incluir el contenido del archivo "Articulos.html" -->
 	{% include "Articulos.html" %}
 </body>
 </html>

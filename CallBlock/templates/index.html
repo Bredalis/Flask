@@ -1,15 +1,25 @@
-{% from "Macros.html" import render_card %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CallBlock</title>
+</head>
+<body>
+	{% from "Macros.html" import render_card %}
 
-{% call render_card(titulo="Mi Tarjeta") %}
-	
-	<p>Este es un contenido personalizado para la tarjeta</p>
-	<p>Otro párrafo con más información</p>
-{% endcall %}
+	{% call render_card(titulo="Mi Tarjeta") %}
+		
+		<p>Este es un contenido personalizado para la tarjeta</p>
+		<p>Otro párrafo con más información</p>
+	{% endcall %}
 
-{% call render_card(titulo="Proyectos") %}
-	
-	<ul>
-		<li>Proyecto 1</li>
-		<li>Proyecto 2</li>
-	</ul>
-{% endcall %}
+	{% call render_card(titulo="Proyectos") %}
+		
+		<ul>
+			<li>Proyecto 1</li>
+			<li>Proyecto 2</li>
+		</ul>
+	{% endcall %}
+</body>
+</html>

@@ -3,14 +3,11 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# Ruta principal
 @app.route("/", methods = ["GET", "POST"])
 def obtener_datos():
-	info_formulario = ""
-
-	if request.method == "POST":
-		info_formulario = request.form.get("contenido")
-
-	return render_template("index.html", nombre = info_formulario)
+	nombre = request.form.get("nombre") if request.method == "POST" else None
+	return render_template("index.html", nombre = nombre)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True)

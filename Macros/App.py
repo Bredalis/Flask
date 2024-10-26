@@ -3,6 +3,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# Definición de usuarios y sus roles
 usuarios = [
 	("Julio", "Admin"), ("Perla", "Usuario"), 
 	("Claribel", "Usuario"), ("Julian", "Admin")
@@ -19,4 +20,4 @@ def lista_usuarios():
 		usuarios_2 = usuarios_2)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True)

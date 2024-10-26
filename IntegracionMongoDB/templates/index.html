@@ -6,20 +6,22 @@
 	<title>Integrando MongoDB</title>
 </head>
 <body>
-
 	<h1>Ejemplo de entrada de datos con Flask</h1>
 
+	<!-- Formulario para agregar usuarios -->
 	<form class="form" method="POST">
-		<label for="entrada-nombre">Nombre:</label>
-		<input type="text" name="contenido" id="entrada-nombre">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" required>
 		<input type="submit" value="Enviar">
 	</form>
 
+	<!-- Mostrar la lista de usuarios -->
 	<h2>Usuarios:</h2>
 	<ul>
-
 		{% for usuario in usuarios %}
 			<li>{{ usuario }}</li>
+		{% else %}
+			<li>No hay usuarios registrados</li>
 		{% endfor %}
 	</ul>
 </body>

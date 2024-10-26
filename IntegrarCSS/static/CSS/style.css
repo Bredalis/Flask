@@ -11,7 +11,7 @@ header, footer {
 	text-align: center;
 }
 
-nav a {
+nav a, ul a {
 	text-decoration: none;
 	color: #007BFF;
 	padding: 5px 10px;
@@ -20,19 +20,13 @@ nav a {
 	transition: all 0.3s;
 }
 
-nav a:hover {
+nav a:hover, ul a:hover {
 	background-color: #0078FF;
 	color: #FFFFFF;
 }
 
 ul a {
-	text-decoration: none;
-	color: #0078FF;
 	font-size: 1.2rem;
-	padding: 5px 10px;
-	margin: 0 5px;
-	border-radius: 5px;
-	transition: all 0.3s;
 }
 
 ul a:hover {

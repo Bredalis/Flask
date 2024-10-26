@@ -1,8 +1,12 @@
 {% macro render_card(titulo) %}
 
-	<div class="card">
-		<div class="card-header">{{ titulo }}</div>
-		<div class="card-body">
+	<!-- Se agrego aria-label para que los lectores de pantalla puedan interpretar el contenido  -->
+
+	<div class="card" aria-label="Card container">
+		<div class="card-header" aria-label="Card header">
+			<h2>{{ titulo }}</h2>
+		</div>
+		<div class="card-body" aria-label="Card body">
 			{{ caller() }}
 		</div>
 	</div>

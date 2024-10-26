@@ -9,15 +9,19 @@
 	<h2>Registro de Usuario</h2>
 
 	<form method="POST">
-		<label for="nombre-usuaio">Nombre de usuario:</label>
-		<input type="text" id="nombre-usuaio" name="usuario" required>
+		<fieldset style="width: 40%; padding: 2%;">
+			<legend>Registro</legend>
 
-		<br><br>
-		<label for="contraseña">Contraseña</label>
-		<input type="password" id="contraseña" name="contraseña" required>
+			<label for="nombre">Nombre de usuario:</label>
+			<input type="text" id="nombre" name="nombre" required>
 
-		<br><br>		
-		<input type="submit" value="Registrar">
+			<br><br>
+			<label for="contraseña">Contraseña:</label>
+			<input type="password" id="contraseña" name="contraseña" required>
+
+			<br><br>		
+			<input type="submit" value="Registrar">
+		</fieldset>
 	</form>
 </body>
 </html>

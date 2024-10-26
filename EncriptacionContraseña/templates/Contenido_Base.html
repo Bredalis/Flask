@@ -3,24 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Acceso de Usuario</title>
+	<title>{% block titulo1 %} {% endblock %}</title>
 </head>
 <body>
-	<h2>Acceso de Usuario</h2>
+	<h2>{% block titulo2 %} {% endblock %}</h2>
 
 	<form method="POST">
 		<fieldset style="width: 40%; padding: 2%;">
-			<legend>Acceso</legend>
-
-			<label for="nombre">Nombre de usuario:</label>
-			<input type="text" id="nombre" name="nombre" required>
+			<legend>{% block titulo3 %} {% endblock %}</legend>
+			
+			<label for="nombre-usuario">Nombre de usuario:</label>
+			<input type="text" id="nombre-usuario" name="usuario" required>
 
 			<br><br>
 			<label for="contraseña">Contraseña:</label>
 			<input type="password" id="contraseña" name="contraseña" required>
 
-			<br><br>		
-			<input type="submit" value="Iniciar Sesión">
+			<br><br>	
+			{% block boton %} 
+			{% endblock %}	
 		</fieldset>
 	</form>
 </body>

@@ -2,57 +2,54 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
-app.secret_key = "bredalis2013"
+app.secret_key = "bredalis2013" # Clave secreta para manejar sesiones
 
+# Diccionario para almacenar usuarios y contraseñas
 usuarios = {}
-print(usuarios)
 
 @app.route("/")
 def index():
-    usuario = session.get("Usuario")
+    usuario = session.get("nombre")
 
     if usuario:
         return f"Bienvenido {usuario} a la app de registro de usuarios"
     return f"Bienvenido a la app de registro de usuarios"
 
-@app.route("/Registro", methods = ["GET", "POST"])
+@app.route("/registro", methods = ["GET", "POST"])
 def registro():
     if request.method == "POST":
-        usuario = request.form["usuario"]
+        usuario = request.form["nombre"]
         contraseña = request.form["contraseña"]
 
-        if usuario in usuarios and usuarios[usuario] == contraseña:
+         # Validar si el usuario ya está registrado
+        if usuario in usuarios:
             return "Ya estas registrado"
 
-        else:
-            session["Usuario"] = usuario
-        
-            usuarios[usuario] = contraseña
-            print(usuarios)
-            return redirect(url_for("index"))
+        # Registrar y almacenar la sesión del nuevo usuario
+        session["nombre"] = usuario
+        usuarios[usuario] = contraseña
+        print(usuarios)
 
-    return render_template("index.html")
+        return redirect(url_for("index"))
+    return render_template("index.html") # Renderizar formulario de registro
 
-@app.route("/Acceso", methods = ["GET", "POST"])
+@app.route("/acceso", methods = ["GET", "POST"])
 def acceso():
     if request.method == "POST":
-        usuario = request.form["usuario"]
+        usuario = request.form["nombre"]
         contraseña = request.form["contraseña"]
 
-        if usuario in usuarios and usuarios[usuario] == contraseña:
-
-            session["Usuario"] = usuario
+        # Validar credenciales de acceso
+        if usuarios.get(usuario) == contraseña:
+            session["nombre"] = usuario
             return redirect(url_for("index"))
 
-        else:
-            return "Nombre de usuario o contraseña incorrecta"
+        return "Nombre de usuario o contraseña incorrecta"
+    return render_template("Acceso.html") # Renderizar formulario de acceso
 
-    return render_template("Acceso.html")
-
-@app.route("/Cerrar_Seccion")
-def cerrar_seccion():
-    session.pop("Usuario", None)
-
+@app.route("/cerrar-sesion")
+def cerrar_sesion():
+    session.pop("nombre", None) # Cerrar sesión del usuario actual
     return redirect(url_for("index"))
 
 if __name__ == "__main__":

@@ -8,8 +8,10 @@
 <body>
 
 	<h2>Estructura de datos</h2>
+
+	<!-- Sección de Listas -->
 	<h3>Listas</h3>
-	<h4>Carteles de Cine:</h4>
+	<h4>Películas de Cine:</h4>
 
 	<ol>
 		<li>{{ peliculas[0] }}</li>
@@ -17,15 +19,19 @@
 		<li>{{ peliculas[2] }}</li>
 	</ol>
 	
+	<!-- Sección de Diccionarios -->
 	<h3>Diccionarios</h3>
-	<h4>Pelicula Destacada</h4>
+	<h4>Película Destacada:</h4>
 
-	<p>El nombre es {{ diccionario["Nombre"] }}, se lanzo en el {{ diccionario["Año"] }} y el protagonista es {{ diccionario["Protagonista"] }}</p>
+	<p>
+		El nombre es {{ diccionario["Nombre"] }}, se lanzó en el {{ diccionario["Año"] }} y el protagonista es {{ diccionario["Protagonista"] }}
+	</p>
 
+	<!-- Sección de Clases -->
 	<h3>Clases</h3>
-	<h4>Pelicula Destacada</h4>
+	<h4>Película Destacada:</h4>
 
-	<p>El nombre es {{ clase.nombre }}, se lanzo en el {{ clase.año }} y el protagonista es {{ clase.protagonista }}</p>	
+	<p>El nombre es {{ clase.nombre }}, se lanzó en el {{ clase.año }} y el protagonista es {{ clase.protagonista }}</p>	
 
 </body>
 </html>

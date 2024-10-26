@@ -10,4 +10,4 @@ def lista_usuarios():
 	return render_template("index.html", usuarios = usuarios)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True)

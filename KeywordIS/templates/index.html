@@ -6,12 +6,10 @@
 	<title>Keyword IS</title>
 </head>
 <body>
-
 	<h2>Números Pares</h2>
 	
 	<ul>
 		{% for n in range(1, 101) %}
-
 			{% if n is even %}
 				<li>{{ n }}</li>
 			{% endif %}		
@@ -19,10 +17,8 @@
 	</ul>
 
 	<h2>Números Impares</h2>
-	
 	<ul>
 		{% for n in range(1, 101) %}
-
 			{% if n is odd %}
 				<li>{{ n }}</li>
 			{% endif %}		
@@ -30,10 +26,8 @@
 	</ul>	
 
 	<h2>Números Divisibles por 5</h2>
-	
 	<ul>
 		{% for n in range(1, 101) %}
-
 			{% if n is divisibleby(5) %}
 				<li>{{ n }}</li>
 			{% endif %}		
@@ -43,7 +37,6 @@
 	<h2>Tipo de variable</h2>
 	{% if variable is sequence %}
 		<p>Es una secuencia</p>
-
 	{% else %}
 		<p>No es una secuencia</p>
 	{% endif %}

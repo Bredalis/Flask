@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template
 
-# Instancia
+# Instancia de la app
 app = Flask(__name__)
 
 class Peliculas:
@@ -24,10 +24,11 @@ def estructura_de_datos():
 		"Protagonista": "Leonardo DiCaprio"
 	} 
 
+	# Instancia de la clase
 	pelicula_volver = Peliculas("Volver al Futuro", "1895", "Michael J.")
 
 	return render_template("index.html", peliculas = peliculas, 
 		diccionario = pelicula_lobo, clase = pelicula_volver)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug = True)

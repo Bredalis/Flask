@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block titulo %} Titulo {% endblock %}</title>
+    <title>{% block titulo %}Título por defecto{% endblock %}</title>
 </head>
 <body>
     <header>
-        {% block h1 %} <h1>Mi sitio Web</h1> {% endblock %}
+        <h1>{% block h1 %}Mi sitio Web{% endblock %}</h1>
     </header>
 
     <main>
-        {% block contenido %} Contenido por defecto {% endblock %}
+        <p>
+            {% block contenido %}Contenido por defecto{% endblock %}
+        </p>
     </main>
 
     <footer>
